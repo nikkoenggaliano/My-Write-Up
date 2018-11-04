@@ -1,3 +1,4 @@
+//gcc antiweeb.c -o dim
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
