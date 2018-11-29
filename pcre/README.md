@@ -57,3 +57,7 @@ $subject = '$flag';
 ```
  
  Dan masih banyak lagi payload payload lain yang bisa digunakan! Jika kalian ingin mencoba sendiri silahkan upload index.php pada local kalian dan pastikan versi php kalian 5.6 atau kurang
+ 
+ Source Asli Dibuat oleh `Reyvand` dan diedit Oleh Penulis
+ 
+ Nikko Enggaliano
