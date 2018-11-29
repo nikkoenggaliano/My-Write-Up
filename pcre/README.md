@@ -31,11 +31,15 @@ Setelah melihat dengan view source beberapa source memungkinkan bisa dilakukanya
 
 Pada select `mod` kita bisa menginspect element salah satu value menjadi `e` dan pada `replacement` kita bisa mengisi dengan PHP code.
 
-Tapi kita TIDAK bisa memasukan shell function seperti `system,shell_exec,dll` oke, Berati kita hanya boleh melakukan `php code exec murni` jadi payload saya seperti ini.
+Tapi kita TIDAK bisa memasukan shell function seperti `system,shell_exec,dll` oke, Berati kita hanya boleh melakukan `php code exec murni` jadi payload saya seperti ini. 
 
 ```
 search=asd&mod=e&replacement=file_get_contents%28%22index.php%22%29%3B&subject=asdf&submit=
 ```
+
+EH tapi kita masih bisa mengunakan `backtick` Untuk mengantikan system. 
+
+
 
 Dan didapatkan source dari index dan berisi flag juga.
 
