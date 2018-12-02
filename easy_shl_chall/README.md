@@ -105,5 +105,35 @@ Domain=[WORKGROUP] OS=[Windows 6.1] Server=[Samba 4.3.11-Ubuntu]
 
 Terlihat disitu ada sebuah sharename solver persis seperti clue pada webnya. Tinggal kita connect
 
+```
+$smbclient //ubuntu/solver -I 110.93.14.30 -N
+                
+WARNING: The "syslog" option is deprecated
+Try "help" to get a list of possible commands.
+smb: \> help
+?              allinfo        altname        archive        backup         
+blocksize      cancel         case_sensitive cd             chmod          
+chown          close          del            deltree        dir            
+du             echo           exit           get            getfacl        
+geteas         hardlink       help           history        iosize         
+lcd            link           lock           lowercase      ls             
+l              mask           md             mget           mkdir          
+more           mput           newer          notify         open           
+posix          posix_encrypt  posix_open     posix_mkdir    posix_rmdir    
+posix_unlink   posix_whoami   print          prompt         put            
+pwd            q              queue          quit           readlink       
+rd             recurse        reget          rename         reput          
+rm             rmdir          showacls       setea          setmode        
+scopy          stat           symlink        tar            tarmode        
+timeout        translate      unlock         volume         vuid           
+wdel           logon          listconnect    showconnect    tcon           
+tdis           tid            logoff         ..             !    
 
+```
+
+Nah disitu kita sudah Mendapatkan akses smb ke share `solver` kita tinggal put aja file name Kita agar terterah di Solver :D
+
+Sekian Terima Kasih.
+
+Nikko Enggaliano
 
