@@ -126,7 +126,7 @@ INSERT INTO `user` (`id`, `user`, `pass`, `sig`, `role`) VALUES
 COMMIT;
 ```
 
-Disitu ada sebuah data yang di inputkan. Tapi terlihat hampir semua datanya terenkripsi, Hanya `user` Saja yang tidak yaitu `Administrator` Namun ada hal menarik, ID dari `user` Administrator ini di enkripsi mengunakan MD5. Kita bisa melakukan Bruteforce untuk mengetahui ID Administrator ini. Terlihat pada halaman awal tadi Website ini hanya menyediakan 1000 user, Maka kita hanya perlu membruteforce dari id(1-1001)
+Disitu ada sebuah data yang di inputkan. Tapi terlihat hampir semua datanya terenkripsi, Hanya `user` Saja yang tidak yaitu `Administrator` Namun ada hal menarik, ID dari `user` Administrator ini di hash mengunakan MD5. Kita bisa melakukan Bruteforce untuk mengetahui ID Administrator ini. Terlihat pada halaman awal tadi Website ini hanya menyediakan 1000 user, Maka kita hanya perlu membruteforce dari id(1-1001)
 
 Ini script yang saya gunakan.
 
@@ -180,5 +180,6 @@ Oke shell sudah terupload dan kita tinggal akses ke ip:9000/upload/shell.phtml
 
 ![](/JhackVM/images/done.png)
 
+Setelah itu kita tinggal lakukan backconnect dari shell tersebut.
 
-Sekian Write Up untuk kali ini, Untuk privilage escalation akan ditulis oleh `Reyvand` Pada blog pribadinya. Terima Kasih!
+Sekian Write Up untuk kali ini, Untuk privilage escalation akan ditulis oleh <a href = "https://kod0kk.wordpress.com/2018/12/10/writeup-pentest-jhack-2018/">`Reyvand`</a> Pada blog pribadinya. Terima Kasih!
