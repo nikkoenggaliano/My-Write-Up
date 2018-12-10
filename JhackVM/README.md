@@ -1,4 +1,4 @@
-#Write UP VM Pentest Semi Final Jakarta Hacking Competition.
+# Write UP VM Pentest Semi Final Jakarta Hacking Competition.
 
 Berikut ini setting network pada vbox yang diberikan.
 
