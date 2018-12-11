@@ -38,7 +38,7 @@ Seperti itulah responsenya. Oke oke mari kita coba isi gambar tersebut dengan ko
 
 Inilah kode php yang saya isikan `<?php echo 1; ?>`
 
-![](/JHackCTF/Picture/img/r1.png)
+![](/JHackCTF/Picture/img/r2.png)
 
 
 Hmmm mendapatkan response seperti itu. Jadi kode kita tetap tidak tereksekusi. Asumsi saya tidak tereksekusi karena format yang saya di server masih `.jpg` saya harus merubah `.jpg` menjadi `.php` muncul ide saya di server saya mengunakan `.htaccess` untuk `rewrite` file saya yang `.jpg` ke `shell.php` Dengan cara.
