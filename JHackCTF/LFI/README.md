@@ -2,7 +2,7 @@
 
 Pada saat kompetisi kita diberikan source dan penampakanya seperti ini
 
-![](/JHackCTF/LFI/index.png)
+![](/JHackCTF/LFI/img/index.png)
 
 
 Mari kita petakan source codenya.
@@ -48,7 +48,7 @@ Wooooooo bisa, Dan saat di decode :( Tidak menemukan apa apa selain hanya source
 
 Pertama saya mengunakan payload seperti ini `data://text/plain,<?=phpinfo()?>//` Untuk menampilkan phpinfo dannnn Success.
 
-![](/JHackCTF/LFI/go.png)
+![](/JHackCTF/LFI/img/go.png)
 
 Dan kita tinggal modify payload kita menjadi seperti ini 
  - `data://text/plain,<?=system('ls')?>//` Untuk Melihat isi dir dan mendapat ada file `flag` 
