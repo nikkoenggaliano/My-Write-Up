@@ -2,7 +2,7 @@
 
 Pertama kita diberikan sebuah web tapi webnya sudah mati, jadi saya coba di local saja, Namun kita diberikan source codenya
 
-![](/JHackCTF/Blind/index.png)
+![](/JHackCTF/Blind/img/index.png)
 
 Seperti itulah penampakan source codenya.
 
@@ -37,7 +37,7 @@ Pada kode tersebut variable $command berisi 10 input POST data kita. Dan di chec
 
 Oke ide pertama saya adalah melakukan direct acces ke flag `.htflagsandboxzazsdmno` dengan dir remote address kita namun gagal :(( 
 
-![](/JHackCTF/Blind/fail.png)
+![](/JHackCTF/Blind/img/fail.png)
 
 403 Forbidden saat saya mencoba direct akses flag tersebut. Ngomong ngomong jika pingin mengetahui remote address kita bisa mengunakan bantuan `whoer.net` disitu tinggal md5 saja ip kalian.
 
@@ -47,7 +47,7 @@ Oke ide selanjutkan kita merancang payload untuk melakukan `ls -atr` dan `cat .h
 
 Saat dijalankan!
 
-![](/JHackCTF/Blind/flag.png)
+![](/JHackCTF/Blind/img/flag.png)
 
 
 Sudah dapatlah flagnya `JHack2018{Next_Level_Exec}` 
