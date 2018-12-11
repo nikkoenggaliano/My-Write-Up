@@ -4,16 +4,16 @@ Pada challenge kali ini dengan point paling tinggi dikategorynya dan tidak diber
 
 Kite pertama diberikan sebuah page login
 
-![](/JHackCTF/Picture/login.png)
+![](/JHackCTF/Picture/img/login.png)
 
 
 Seperti biasa jika diberikan sebuah login page saya akan mencoba teknik2 yang umum. Setelah beberapa saat cukup kesulitan untuk masuk dengan berbagai payload sqli ternyata login ini masuk dengan param tampering di bagian username dengan kita memasukan sebuah array pada namenya `[]`
 
-![](/JHackCTF/Picture/array.png)
+![](/JHackCTF/Picture/img/array.png)
 
 Setelah masuk kita diberikan form seperti ini tampilanya.
 
-![](/JHackCTF/Picture/home.png)
+![](/JHackCTF/Picture/img/home.png)
 
 Pada form tersebut kita diberikan sebuah link sample untuk dimasukan ke form tersebut.
 
@@ -21,24 +21,24 @@ Pada form tersebut kita diberikan sebuah link sample untuk dimasukan ke form ter
 
 Dan output yang diperoleh adalah seperti ini.
 
-![](/JHackCTF/Picture/dh.png)
+![](/JHackCTF/Picture/img/dh.png)
 
 Oke saat kita mencoba memasukan link lain.
 
-![](/JHackCTF/Picture/err.png)
+![](/JHackCTF/Picture/img/err.png)
 
 
 Oke mendapatkan sebuah alert error tersebut. Jadi kita hanya boleh memasukan web `https` dan file berakhiran `.jpg` 
 
 Karena saya kebetulan mempunyai website ber SSL pertama saya membuat file `.jpg` kosong dan memasukan nya. Dan melihat responsenya di brupsuite!
 
-![](/JHackCTF/Picture/r1.png)
+![](/JHackCTF/Picture/img/r1.png)
 
 Seperti itulah responsenya. Oke oke mari kita coba isi gambar tersebut dengan kode kode php.
 
 Inilah kode php yang saya isikan `<?php echo 1; ?>`
 
-![](/JHackCTF/Picture/r1.png)
+![](/JHackCTF/Picture/img/r1.png)
 
 
 Hmmm mendapatkan response seperti itu. Jadi kode kita tetap tidak tereksekusi. Asumsi saya tidak tereksekusi karena format yang saya di server masih `.jpg` saya harus merubah `.jpg` menjadi `.php` muncul ide saya di server saya mengunakan `.htaccess` untuk `rewrite` file saya yang `.jpg` ke `shell.php` Dengan cara.
@@ -52,7 +52,7 @@ Sekarang isi dari `shell.php` adalah `<?php echo exec('whoami'); ?>`
 
 Dan saat dimasukan!
 
-![](/JHackCTF/Picture/s1.png)
+![](/JHackCTF/Picture/img/s1.png)
 
 
 Yeahh!! keluar `www-data` Namun itu adalah `whoami` dari server saya! Hmm kita tinggal merubah payloadnya agar dapat melakukan local read file. Saya mengunakan payload ini
@@ -63,11 +63,11 @@ header("LOCATION: php://filter/convert.base64-encode/resource=index.php");
 
 Dan didapatkan responseee seperti ini..
 
-![](/JHackCTF/Picture/s2.png)
+![](/JHackCTF/Picture/img/s2.png)
 
 Woaaaa Successs!!! 
 
-![](/JHackCTF/Picture/flag.png)
+![](/JHackCTF/Picture/img/flag.png)
 
 Didapatkanlah flagnya saat mengakses file tersebut!
 
