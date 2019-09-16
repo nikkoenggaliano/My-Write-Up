@@ -1,0 +1,8 @@
+# See http://www.robotstxt.org/wc/norobots.html for documentation on how to use the robots.txt file
+# https://www.youtube.com/watch?v=kOHB85vDuow
+
+User-agent: *
+
+Disallow: 
+/article/
+ 
