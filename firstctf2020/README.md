@@ -272,7 +272,69 @@ Jujur saya juga gapaham. Dan gak bisa jelasin lebih lanjut, karena ini guessing.
 
 
 
+## Spourious File
 
+Diberikan sebuah zip file. Yang dapat diunduh di folder `src` dengan nama `s.zip`
+
+`s.zip` dikunci dengan password yang mana passwordnya tidak ada di wordlist `rockyou.txt` 
+
+Kami menggunakan `fcrackzip`  dengan option password length = 5. Dan menemukan passwordnya adalah
+
+`f7c74` :<(
+
+
+
+Lalu setelah mengextract zip terdapat sebuah file `spourious`.
+
+
+
+```sh
+$ file spourious
+spourious: data
+```
+
+Filenya berbentuk `data`
+
+```sh
+hexdump -C spourious | head -3
+00000000  7f 45 4c 4c 02 01 01 00  00 00 00 00 00 00 00 00  |.ELL............|
+00000010  03 00 3e 00 01 00 00 00  f0 05 00 00 00 00 00 00  |..>.............|
+00000020  40 00 00 00 00 00 00 00  98 19 00 00 00 00 00 00  |@...............|
+```
+
+Terlihat janggal pada headernya. Seperti header dari sebuah `elf binary` 
+
+Berikut
+
+`7f 45 4c 4c` Hex dari `spourious` 
+
+`7F 45 4C 46` Hex dari `elf` asli.
+
+
+
+Berubah satu byte, Tinggal dirubah kembali. Kita gunakan PHP saja untuk patching
+
+```php
+php > $data = file_get_contents("spourious");
+php > $data[3] = chr(0x46);
+php > file_put_contents("patch", $data);
+```
+
+Lalu cek kembali 
+
+```sh
+$ file patch
+patch: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=0a26ac3c18e8849d7b90483089cfe61ed03f3066, not stripped
+```
+
+Tinggal dijalankan
+
+```sh
+$ ./patch
+Your flag: g7qqtaOUkjwJ1tbcN6Dwl6ej          
+```
+
+Flagnya = `g7qqtaOUkjwJ1tbcN6Dwl6ej` 
 
 
 
