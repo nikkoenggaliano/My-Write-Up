@@ -2,7 +2,7 @@
 
 
 
-Assalamualaikum warahmatullahi wabarakatuh. Sudah lama tidak menulis tentang Write UP CTF.  Ceritanya salah satu sahabat saya `@aiemruut` share link CTF di Group Surabaya Hacker Link. Karena saya gabut dan tidak pernah main CTF lagi, saya memutuskan membuat team dengan Adik-adik saya yang overpower `@kosongblong` dan `@colorlesss`. Ya saya bilang ke mereka berdua untuk di`gendong` selama CTF, karena 2 hari CTF itu, saya ada Exam 2 kali juga yang satu `****` dan `****` 😭😭. Jadi sejujurnya di CTF ini saya cukup `useless`. At all team kami finis di urutan ke 10 dari 278 peserta. Terima kasih Ayik dan Dim-Dim kun.
+Assalamualaikum warahmatullahi wabarakatuh. Sudah lama tidak menulis tentang Write UP CTF.  Ceritanya salah satu sahabat saya `@aiemruut` share link CTF di Group Surabaya Hacker Link. Karena saya gabut dan tidak pernah main CTF lagi, saya memutuskan membuat team dengan Adik-adik saya yang overpower `@kosongblong` dan `@colorlesss`. Ya saya bilang ke mereka berdua untuk di`gendong` selama CTF, karena 2 hari CTF itu, saya ada Exam 2 kali juga yang satu `****` dan `****` 😭😭. Jadi sejujurnya di CTF ini saya cukup `useless`. At all team kami finish di urutan ke 10 dari 278 peserta. Terima kasih Ayik dan Dim-Dim kun.
 
 
 
@@ -269,3 +269,20 @@ Flagnya = 352
 
 
 Jujur saya juga gapaham. Dan gak bisa jelasin lebih lanjut, karena ini guessing.
+
+
+
+
+
+
+
+# Penutup
+
+Terima Kasih Ayik dan Dim Dim kun sudah Carrying so Hard. Terima kasih juga do'a do'a selama saya Exam. Win Win Solution Team Soon. 
+
+
+
+
+
+# Wibu x Koreya Bersatu Tidak Bisa Dikalahkan
+
