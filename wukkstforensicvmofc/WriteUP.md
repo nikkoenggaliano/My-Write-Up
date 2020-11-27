@@ -1,4 +1,6 @@
-# Write UP _KKS - TNI AD CTF 2020_ Forensic VM
+![](.\img\kkst.png)
+
+# 
 
 **اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَا تُهُ** / **بِسْمِ اللّهِ الرَّحْمَنِ الرَّحِيْمِ** Di sini saya mau berbagi prespektif as Probsetter dan as Solver di tulisan kali ini. Ternyata banyak yang terjadi ya, teman-teman yang ikut kompetisinya pasti sudah tau lah di depan layar apa yang terjadi. Untuk belakang layar? Someday para panita akan saya ajak bercerita.
 
@@ -333,3 +335,49 @@ Terlihat pada result paling atas, system melakukan requests `nc` . Dapat didecod
 
 
 flag = **KKST2020{157.1.12.12:1399}**
+
+
+
+### Keberuntungan
+
+Fokus soal ini adalah mencari backdoor yang ditinggalkan oleh attacker. Kita dapat mencari backdoor tersebut dengan kata utama dalam deskripsi yaitu `Portable Executable` yaitu sebuah file yang memiliki extensi `.exe`. Kita dapat mencarinya dengan menggunakan command seperti berikut ini.
+
+
+
+```sh
+root@kkst2020:/var/www/html/admin# find / -name "*.exe"
+/usr/bin/bd.exe
+^C
+root@kkst2020:/var/www/html/admin#
+```
+
+Result pertamanya adalah backdoor tersebut. 
+
+```sh
+root@kkst2020:/var/www/html/admin# find / -name "*.exe"
+/usr/bin/bd.exe
+^C
+root@kkst2020:/var/www/html/admin#
+```
+
+Lalu kita harus mendapatkan ip:port dari backdoor tersebut. Saya memiliki 2 cara untuk itu.
+
+1. Menjalankan pada VM windows lalu capture dengan Wireshark
+2. Upload virus total
+
+
+
+![](.\img\ws.png)
+
+
+
+![](.\img\vt.png)
+
+Flag = **KKST2020{/usr/bin/bd.exe:}**
+
+
+
+
+# Penutup
+
+اَلْحَمْدُ للَّهِ رَبِّ الْعالَمِينَ Terima kasih telah membaca. Dan terima kasih kepada semuanya yang telah antusias mengikuti kompetisi KKS-TNI AD ini. Dan juga terima kasih telah mengerjakan VM kategori Forensic ini. Saya sendiri sangat puas dengan VM yang saya kembangkan ini. Sekali lagi Terima kasih pada semua pihak :cupid: 
